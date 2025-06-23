@@ -20,7 +20,10 @@ class Siswa extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$sql = $this->db->get('m_siswa')->result();
+		echo json_encode($sql);
+		// var_dump($sql);
+		// $this->load->view('welcome_message');.
 	}
 
 	public function store(){
